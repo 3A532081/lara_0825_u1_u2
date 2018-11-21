@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
         //return view('welcome');
-    /*$post=new\App\Post();
+  /*  $post=new\App\Post();
     $post->title='test title';
     $post->content='test content';
     $post->save();*/
@@ -41,6 +41,17 @@ Route::get('/', function () {
     /*$post=\App\Post::find(1);
     $post->delete();*/
 
-   \App\Post::destroy(2);
+   /*\App\Post::destroy(2);*/
+
+    /*$allPosts=\App\Post::all();
+    dd($allPosts);
+    $featuredPosts=\App\Post::where('is_feature',1)->get();
+    dd($featuredPosts);*/
+
+    $fourthPost=\App\Post::find(4);
+    dd($fourthPost);
+    $lastPost=\App\Post::orderBy('id','DESC')->first();
+    dd($lastPost);
+
 
 });
